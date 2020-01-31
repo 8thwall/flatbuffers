@@ -5,7 +5,7 @@
 Rules for building C++ flatbuffers with Bazel.
 """
 
-flatc_path = "@com_github_google_flatbuffers//:flatc"
+flatc_path = "@flatbuffers//:flatc"
 
 DEFAULT_INCLUDE_PATHS = [
     "./",
@@ -221,7 +221,7 @@ def flatbuffer_cc_library(
             "-parse_headers",
         ],
         deps = [
-            "@com_github_google_flatbuffers//:runtime_cc",
+            "@flatbuffers//:runtime_cc",
         ],
         includes = [],
         linkstatic = 1,
